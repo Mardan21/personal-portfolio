@@ -8,6 +8,8 @@ type Props = {
 }
 
 export default function Projects({ projects }: Props) {
+
+
   return (
     <motion.div 
         initial={{ opacity: 0 }}
@@ -48,13 +50,27 @@ export default function Projects({ projects }: Props) {
 
                         <div className="flex items-center space-x-2 justify-center">
                             {project?.technologies.map((technology) => (
-                                <img className="h-10 w-10 rounded-full object-cover" key={technology._id} src={urlFor(technology?.image).url()} alt=""  />
+                                <img className="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover" key={technology._id} src={urlFor(technology?.image).url()} alt=""  />
                             ))}
                         </div>
 
-                        <p className="text-sm md:text-md lg:text-lg text-justify ">
+                        <p className="text-sm md:text-md lg:text-lg text-center ">
                             {project?.summary}
                         </p>
+
+                        {/* <p className="text-sm md:text-md lg:text-lg text-center ">
+                            {project?.linkToBuild}
+                        </p> */}
+
+                        {project?.linkToBuild ? (
+                            <p className="text-sm md:text-md lg:text-lg text-center ">
+                                Build Demo: {project?.linkToBuild}
+                            </p>
+                        ) : (
+                            <p className="text-sm md:text-md lg:text-lg text-center ">
+                                Build Demo: N/A
+                            </p>
+                        )}
                     
                     </div>
                 </div>

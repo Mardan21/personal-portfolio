@@ -33,10 +33,10 @@ export default function About({ pageInfo }: Props) {
             }}
             viewport={{ once: true }}
             src={urlFor(pageInfo?.profilePic).url()} 
-            className="-mb-20 md:mb-0 flex-shrink-0 w-48 h-48 rounded-full object-cover md:rounded-xl md:w-64 md:h-72 xl:w-[400px] xl:h-[480px]"
+            className="-mb-20 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-xl md:w-64 md:h-72 xl:w-[400px] xl:h-[480px]"
         />
-        <div className="space-y-10 px-0 md:px-10">
-            <h4 className="text-4xl text-[#DFDDC7] font-semibold" >Here's a <span className="underline decoration-[#F58B54]/50">little</span>{" "}about me</h4>
+        <div className="space-y-5 md:space-y-10 px-0 md:px-10">
+            <h4 className="text-2xl md:text-4xl text-[#DFDDC7] font-semibold" >Here&apos;s a <span className="underline decoration-[#F58B54]/50">little</span>{" "}about me</h4>
             <p className="text-sm text-[#DFDDC7]">
                 {pageInfo?.backgroundInformation}
             </p>
