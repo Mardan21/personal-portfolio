@@ -14,6 +14,7 @@ import { groq } from "next-sanity"
 import { sanityClient } from '../../sanity'
 import sanityCli from '../../sanity.cli'
 import { ArrowUturnUpIcon } from '@heroicons/react/24/solid'
+import Projects2 from '../../components/Projects2'
 
 type Props = {
   pageInfo: PageInfo;
@@ -25,9 +26,9 @@ type Props = {
 
 const Home = ({pageInfo, experiences, skills, projects, socials}: Props) => {
   return (
-    <div className="bg-[#211717]/[0.9] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F58B54]/80">
+    <div className="bg-gradient-to-br from-[#333333] to-[#00bfff] h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#FF4500]">
       <Head>
-        <title>Mardan&lsquo;s Portfolio</title>
+        <title>Mardan</title>
       </Head> 
 
       <Header socials={socials}/>
@@ -36,30 +37,34 @@ const Home = ({pageInfo, experiences, skills, projects, socials}: Props) => {
         <Hero pageInfo={pageInfo} />
       </section>
 
-      <section id="about" className="snap-center">
+      {/* <section id="about" className="snap-center">
         <About pageInfo={pageInfo} />
-      </section>
+      </section> */}
 
       <section id="experience" className="snap-center">
         <WorkExperience experiences={experiences} />
       </section>
 
-      <section id="skills" className="snap-start">
+      {/* <section id="skills" className="snap-start">
         <Skills skills={skills} />
-      </section>
+      </section> */}
 
-      <section id="projects" className="snap-start">
+      {/* <section id="projects" className="snap-center">
         <Projects projects={projects} />
+      </section> */}
+
+      <section id="projects" className="snap-center">
+        <Projects2 projects={projects} />
       </section>
 
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
 
-      <footer className="sticky bottom-5 w-full">
+      <footer className="kunaiCursor sticky bottom-5 w-full">
         <div className="flex items-center justify-center">
           <Link href="#hero">
-            <div className="h-10 w-10 bg-[#211717]/90 rounded-full flex items-center justify-center  cursor-pointer">
+            <div className="h-10 w-10 bg-[#211717]/90 rounded-full flex items-center justify-center rasenganCursor">
               <ArrowUturnUpIcon className="h-7 w-7 hover:grayscale-100 text-[#DFDDC7]  animate-pulse"/>
             </div>
           </Link>

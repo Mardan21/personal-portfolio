@@ -15,29 +15,29 @@ export default function ContactMe({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:mardanmahmut@gmail.com?subject={formData.subject}&body=Hi, my name is ${formData.name}.${formData.message} (${formData.email})`;
+    window.location.href = `mailto:mardanmahmut7@gmail.com?subject={formData.subject}&body=Hi, my name is ${formData.name}.${formData.message} (${formData.email})`;
   };
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-        <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-[#F58B54] text-xl md:text-2xl">
+    <div className="kunaiCursor h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+        <h3 className="narutoTextName absolute top-20 md:top-24 uppercase tracking-[20px] text-xl md:text-5xl">
             Contact
         </h3>
 
-        <div className="flex flex-col space-y-4 md:space-y-5 lg:space-y-6 2xl:space-y-10">
-            <h4 className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-center text-[#DFDDC7]">
+        <div className="flex flex-col mt-10 space-y-4 md:space-y-5 lg:space-y-6 2xl:space-y-10">
+            <h4 className="ninjaText text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-center text-[#fff]">
                 I got the skills to pay the bills.{" "}
-                <span className="decoration-[#F58B54]/80 underline">Lets Talk.</span>
+                <span className="decoration-[#0c2fdf] underline text-[#000]">Lets Talk.</span>
             </h4>
 
-            <div className="space-y-1 md:space-y-3 2xl:space-y-5">
+            <div className="space-y-1 md:space-y-3 xl:space-y-5">
                 <div className="flex items-center space-x-5 justify-center">
-                    <EnvelopeIcon className="text-[#F58B54] h-7 w-7 animate-pulse"/>
-                    <p className="text-lg md:text-2xl lg:text-2xl text-[#DFDDC7]">mardanmahmut@gmail.com</p>
+                    <EnvelopeIcon className="text-[#000] h-7 w-7 animate-pulse"/>
+                    <p className="ninjaText text-lg md:text-2xl lg:text-2xl tracking-[2px] text-[#fff]">mardanmahmut7@gmail.com</p>
                 </div>
                 <div className="flex items-center space-x-5 justify-center">
-                    <MapPinIcon className="text-[#F58B54] h-7 w-7 animate-pulse"/>
-                    <p className="text-lg md:text-2xl lg:text-2xl text-[#DFDDC7]">Pittsburg, California</p>
+                    <MapPinIcon className="text-[#000] h-7 w-7 animate-pulse"/>
+                    <p className="ninjaText text-lg md:text-2xl lg:text-2xl tracking-[2px] text-[#fff]">San Francisco, California</p>
                 </div>
             </div>
 
@@ -46,13 +46,13 @@ export default function ContactMe({}: Props) {
                     <input 
                         {...register('name')} 
                         placeholder="Name" 
-                        className="contactInput w-80 md:w-auto" 
+                        className="ninjaText text-[#00bfff] kunaiCursor contactInput w-80 md:w-auto" 
                         type="text" 
                     />
                     <input 
                         {...register('email')} 
                         placeholder="Email"
-                        className="contactInput w-80 md:w-auto" 
+                        className="ninjaText text-[#00bfff] kunaiCursor contactInput w-80 md:w-auto" 
                         type="email" 
                     />
                 </div>
@@ -60,16 +60,16 @@ export default function ContactMe({}: Props) {
                 <input 
                     {...register('subject')}
                     placeholder="Subject" 
-                    className="contactInput" 
+                    className="ninjaText text-[#00bfff] kunaiCursor contactInput" 
                     type="text" 
                 />
 
                 <textarea 
                     {...register('message')} 
                     placeholder="Message" 
-                    className="contactInput" 
+                    className="ninjaText text-[#00bfff] kunaiCursor contactInput" 
                 />
-                <button className="bg-[#F58B54] py-3 md:py-5 px-10 rounded-br-3xl text-[#211717] font-bold text-lg">
+                <button className="bg-[#ff4500]/60 narutoText rasenganCursor tracking-[4px] py-3 md:py-5 px-10 rounded-br-3xl text-[#0c2fdf] font-bold text-4xl hover:narutoText2 hover:text-[#FF4500] hover:bg-[#0c2fdf]/70">
                     {" "}
                     Submit
                 </button>

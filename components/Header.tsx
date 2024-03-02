@@ -1,4 +1,3 @@
-import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
 import Link from "next/link";
@@ -11,8 +10,9 @@ type Props = {
 }
 
 export default function Header({ socials }: Props) {
+
     return (
-        <header className="sticky top-0 flex justify-between max-w-7xl mx-auto z-20 sm:items-center ">
+        <header className="kunaiCursor sticky top-0 flex justify-between max-w-7xl mx-auto z-20 sm:items-center ">
             <motion.div
                 initial={{
                     x: -500,
@@ -33,8 +33,9 @@ export default function Header({ socials }: Props) {
                     <SocialIcon 
                         key={social._id}
                         url={social.url} 
-                        fgColor="#F58B54"
+                        fgColor="#fff"
                         bgColor="transparent"
+                        className="rasenganCursor rounded-full hover:border hover:border-white hover:bg-[#ff4500]"
                     />
                 ))}
             </motion.div>
@@ -54,15 +55,9 @@ export default function Header({ socials }: Props) {
                     transition={{
                         duration: 1.5
                     }}
-                    className="flex flex-row items-center cursor-pointer">
-                        <EnvelopeOpenIcon className="text-[#F58B54] my-3 h-6 w-6 mr-3"/>
-                        {/* <SocialIcon
-                            className="cursor-pointer" 
-                            network="email" 
-                            fgColor="#F58B54"
-                            bgColor="transparent"
-                        /> */}
-                        <p className="uppercase hidden mr-4 md:inline-flex text-sm text-[#F58B54]">Get in touch</p>    
+                    className="flex flex-row items-center rasenganCursor">
+                        <EnvelopeOpenIcon className="text-white hover:text-[#ff4500] h-6 w-6 mr-3"/>
+                        <p className="ninjaText hover:text-[#FF4500] tracking-[2px] uppercase hidden mr-4 md:inline-flex text-lg">Contact</p>    
                 </motion.div>
             </Link>
         </header>

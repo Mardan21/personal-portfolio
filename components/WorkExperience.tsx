@@ -8,22 +8,19 @@ type Props = {
 }
 
 export default function WorkExperience({ experiences }: Props) {
+  const sortedExperiences = experiences.sort((a, b) => new Date(b.dateStarted).getTime() - new Date(a.dateStarted).getTime())
+
   return (
-    <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center"
-    >
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-[#F58B54] text-xl md:text-2xl">
+    <div className="kunaiCursor h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center">
+        <h3 className="narutoTextName absolute top-24 uppercase tracking-[20px] text-xl md:text-2xl lg:text-5xl">
             Experience
         </h3>
 
-        <div className="w-screen h-3/4 md:2/3 md:w-full text-left flex space-x-5 overflow-x-scroll p-10 md:pb-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F58B54]/80">
-          {experiences?.map((experience) => (
-            <ExperienceCard key={experience._id} experience={experience}/>
+        <div className="kunaiCursor w-screen md:w-full text-left flex space-x-5 overflow-x-scroll p-10 md:pb-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#FF4500]">
+          {sortedExperiences?.map((experience) => (
+            <ExperienceCard key={experience.dateStarted} experience={experience}/>
           ))}
         </div>
-    </motion.div>
+    </div>
   )
 };

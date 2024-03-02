@@ -15,10 +15,10 @@ export default function Projects({ projects }: Props) {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+        className="kunaiCursor h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
         
-        <h3 className="absolute top-20 md:top-24 uppercase tracking-[20px] text-[#F58B54] text-xl md:text-2xl">
+        <h3 className="narutoTextName absolute top-20 md:top-24 uppercase tracking-[20px] text-[#F58B54] text-xl md:text-5xl">
             Projects
         </h3>
 
@@ -37,7 +37,7 @@ export default function Projects({ projects }: Props) {
                         viewport={{ once: true }}
                         src={urlFor(project?.image).url()}
                         alt=""
-                        className="h-28 md:h-72 xl:h-80 object-contain"
+                        className="h-28 md:h-40 xl:h-50 object-contain"
                     />
 
                     <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
@@ -57,10 +57,6 @@ export default function Projects({ projects }: Props) {
                         <p className="text-sm md:text-md lg:text-lg text-center ">
                             {project?.summary}
                         </p>
-
-                        {/* <p className="text-sm md:text-md lg:text-lg text-center ">
-                            {project?.linkToBuild}
-                        </p> */}
 
                         {project?.linkToBuild ? (
                             <p className="text-sm md:text-md lg:text-lg text-center ">
