@@ -20,14 +20,14 @@ export default function ExperienceCard({ experience }: Props) {
   const endDate = `${endMonth} \u00A0 ${endYear.toString()}`
 
   return (
-    <div className="flex flex-col border border-black hover:border-white drop-shadow-2xl rounded-3xl items-center space-y-0 flex-shrink-0 h-100 w-100 xl:h-[400px] xl:w-[400px] snap-center bg-[#333333]/50 p-5 md:p10 hover:opacity-100 opacity-40 transition-opacity duration-500 overflow-hidden">
-        <div style={{ minWidth: '300px', minHeight: '130px' }} className="flex w-full px-0 mb-4 md::px-10">
+    <div className="flex flex-col border border-black hover:border-white drop-shadow-2xl rounded-3xl items-center space-y-0 flex-shrink-0 h-[80%] w-[80%] sm: md:h-[500px] md:w-[70%] lg:h-[400px] lg:w-[400px] xl:h-[400px] xl:w-[400px] snap-center bg-[#ff4500]/50 p-5 md:p10 hover:opacity-100 opacity-40 transition-opacity duration-500 overflow-hidden ">
+        <div className="flex justify-between w-full px-0 mb-4 md::px-10">
             {/* Left Section */}
-            <div className="w-[70%] flex flex-col">
+            <div className="w-full md:w-[70%] lg:w-[60%] flex flex-col">
                 {/* Top Section */}
                 <div className="flex flex-col h-full">
                     {/* Job Title */}
-                    <h4 className="narutoText2 tracking-[2px] text-md md:text-lg font-light mt-0 mb-auto">
+                    <h4 className="narutoText2  text-[#0c2fdf] tracking-[2px] text-md md:text-lg font-light mt-0 mb-auto">
                         {experience?.jobTitle}
                     </h4>
                     
@@ -36,7 +36,7 @@ export default function ExperienceCard({ experience }: Props) {
                         <p className="ninjaText font-bold text-md pb-2 md:text-lg">
                             {experience?.company}
                         </p>
-                        <p className="uppercase font-semibold text-sm md:text-md narutoText2 text-black">
+                        <p className="uppercase font-semibold text-sm md:text-md narutoText text-white">
                             {startMonth} &nbsp; {startYear} &nbsp; - &nbsp; {experience.isCurrentlyWorkingHere ? "Present" : endDate}
                         </p>
                     </div>
@@ -44,10 +44,10 @@ export default function ExperienceCard({ experience }: Props) {
                 </div>
             </div>
             {/* Right Section */}
-            <div className="w-[30%] flex justify-end items-center">
+            <div className="hidden md:flex w-[30%] text-right justify-end items-end">
                 {/* Image */}
                 <img 
-                    className="visible w-28 h-28 rounded-3xl xl:w-[100px] xl:h-[100px] mb-2 object-cover object-center"
+                    className="md:w-28 md:h-28 rounded-3xl xl:w-[100px] xl:h-[100px] mb-2 object-cover object-center"
                     src={urlFor(experience?.companyImage).url()}
                     alt=""
                 />
@@ -83,7 +83,7 @@ export default function ExperienceCard({ experience }: Props) {
             </p> */}
         </div>
 
-        <ul className="kunaiCursor list-disc ninjaText space-y-2 pr-10 pl-10 text-sm overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#0c2fdf]/80">
+        <ul className="kunaiCursor list-disc ninjaText space-y-2 pr-4 pl-4 md:pr-10 md:pl-10 text-xs sm:text-sm md:text-sm lg:text-sm overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#0c2fdf]/80">
             {experience.points.map((point, i) => (
                 <li key={i}>{point}</li>
             ))}
