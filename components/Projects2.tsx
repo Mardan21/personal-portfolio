@@ -102,7 +102,7 @@ export default function Projects2({ projects }: Props) {
 
 
                     {/* Mobile Screens */}
-                    <div className="flex md:hidden w-[80%] h-[40%] rounded-xl border border-black bg-gradient-to-br from-[#a40] to-[#00bfff] p-4">
+                    <div className="flex md:hidden w-[80%] h-[60%] rounded-xl border border-black bg-gradient-to-br from-[#a40] to-[#00bfff] p-4">
                         {/* Left Section */}
                         <div className="flex flex-col w-full justify-between">
                             {/* <img

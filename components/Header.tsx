@@ -55,7 +55,7 @@ export default function Header({ socials }: Props) {
                     transition={{
                         duration: 1.5
                     }}
-                    className="flex flex-row items-center rasenganCursor">
+                    className="flex flex-row items-center mt-3 md:mt-0 rasenganCursor">
                         <EnvelopeOpenIcon className="text-white hover:text-[#ff4500] h-6 w-6 mr-3"/>
                         <p className="ninjaText hover:text-[#FF4500] tracking-[2px] uppercase hidden mr-4 md:inline-flex text-lg">Contact</p>    
                 </motion.div>
