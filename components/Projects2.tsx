@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Project } from '../typings'
 import { urlFor } from '../sanity';
+import Link from 'next/link';
 
 type Props = {
     projects: Project[];
@@ -60,9 +61,9 @@ export default function Projects2({ projects }: Props) {
 
             {/* Project Modal */}
             {selectedProject && (
-                <div className="modalContainer flex justify-center items-center bg-[#151515] bg-opacity-70">
+                <div className="modalContainerMobile md:modalContainerMedium lg:modalContainer  flex justify-center items-center bg-[#151515] bg-opacity-70">
                     {/* Tablets and Larger Screens */}
-                    <div className="hidden md:flex w-[90%] h-[40%] md:h-[45%] lg:w-[800px] lg:h-[500px] rounded-xl border border-black bg-gradient-to-br from-[#a40] to-[#00bfff] p-4 md:p-8 ">
+                    <div className="hidden md:flex w-[90%] h-[40%] md:h-[55%] lg:w-[800px] lg:h-[500px] rounded-xl border border-black bg-gradient-to-br from-[#a40] to-[#00bfff] p-4 md:p-8 ">
                         {/* Left Section */}
                         <div className="flex flex-col w-[40%] md:w-[50%] justify-start">
                             <img
@@ -80,7 +81,11 @@ export default function Projects2({ projects }: Props) {
 
                                 <div className="flex flex-col">
                                     <p className="ninjaText text-sm lg:text-xl text-[#000] uppercase justify-end mb-2">Link To Demo:</p>
-                                    <p className="ninjaText text-sm lg:text-md tracking-[1px] text-[#fff]">{selectedProject.linkToBuild}</p>
+                                    <Link href={selectedProject.linkToBuild} target="_blank">
+                                        <p className="ninjaText rasenganCursor text-sm lg:text-md tracking-[1px] text-[#fff] underline decoration-[#fff] hover:decoration-[#0c2fdf] hover:text-[#0c2fdf]">
+                                            {selectedProject.linkToBuild}
+                                        </p>   
+                                    </Link>
                                 </div>
 
                             </div>
@@ -105,13 +110,6 @@ export default function Projects2({ projects }: Props) {
                     <div className="flex md:hidden w-[80%] h-[60%] rounded-xl border border-black bg-gradient-to-br from-[#a40] to-[#00bfff] p-4">
                         {/* Left Section */}
                         <div className="flex flex-col w-full justify-between">
-                            {/* <img
-                                src={urlFor(selectedProject.image).url()}
-                                alt=""
-                                className="hidden md:block w-full h-auto object-cover rounded-xl border border-black"
-                            /> */}
-
-                            {/* Top Section */}
                             <div>
                                 <div className="flex flex-row justify-between text-xl sm:text-2xl">
                                     <h4 className="narutoText2 text-[#FF4500] tracking-[1px] sm:tracking-[2px]">
@@ -132,9 +130,11 @@ export default function Projects2({ projects }: Props) {
                                 <p className="ninjaText text-xs sm:text-sm text-[#fff] uppercase">
                                     Demo Link:
                                 </p>
-                                <p className="ninjaText text-xs sm:text-sm sm:tracking-[1px] text-[#000]">
-                                    {selectedProject.linkToBuild}
-                                </p>
+                                <Link href={selectedProject.linkToBuild} target="_blank">
+                                    <p className="ninjaText rasenganCursor text-xs tracking-[1px] text-[#000] underline decoration-[#000] hover:decoration-[#0c2fdf] hover:text-[#0c2fdf]">
+                                        {selectedProject.linkToBuild}
+                                    </p>   
+                                </Link>
                             </div>
                             
 
