@@ -33,11 +33,12 @@ export default function Hero({ pageInfo }: Props) {
           Mardan &nbsp; Mahmut
         </h1> */}
 
-        <div className="flex justify-center mb-6">
+        <div className="w-2xl flex justify-center mb-6">
           <img
             src="/assets/mardan_naruto_logo.svg"
             alt="Mardan Mahmut"
-            className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto"
+            // className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto"
+            className="w-[80%] h-[80%]"
             style={{
               filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.3))",
             }}

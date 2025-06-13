@@ -71,7 +71,7 @@ export default function About({ pageInfo }: Props) {
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col relative sm:h-[70vh] md:h-[70vh] lg:h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="kunaiCursor flex relative flex-col text-center md:text-left max-w-7xl px-10 justify-evenly mx-auto items-center min-h-screen py-20 "
     >
       <motion.h3
         initial={{ opacity: 0, y: -50 }}

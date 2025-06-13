@@ -89,7 +89,7 @@ export default function Header({ socials }: Props) {
   ];
 
   return (
-    <header className="kunaiCursor fixed top-0 w-full z-50 bg-gradient-to-l from-[#e31e24]/80 via-[#fa5000]/80 to-zinc-900/80 backdrop-blur-md border-b border-white/10">
+    <header className="kunaiCursor fixed top-0 w-full z-50 bg-gradient-to-l from-[#e31e24]/80 via-[#fa5000]/80 to-zinc-900/80 backdrop-blur border-b border-white/10">
       <nav className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex justify-between items-center h-20 md:h-20">
           {/* Logo/Brand */}

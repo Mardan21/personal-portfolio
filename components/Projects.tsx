@@ -396,7 +396,7 @@ export default function Projects({ projects }: Props) {
                   <img
                     src={urlFor(project.image).url()}
                     alt={project.title}
-                    className="w-full sm:h-24 md:h-32 lg:h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-[100%] h-[80px] sm:h-24 md:h-32 lg:h-40 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   {/* Overlay with quick action */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -406,7 +406,7 @@ export default function Projects({ projects }: Props) {
                       className="flex items-center gap-2 px-4 py-2 bg-[#e31e24] hover:bg-[#fa5000] text-white rounded-lg transition-colors duration-200 font-medium text-sm"
                     >
                       <ArrowTopRightOnSquareIcon className="w-4 h-4" />
-                      View Project
+                      View
                     </Link>
                   </div>
                 </div>
@@ -418,9 +418,9 @@ export default function Projects({ projects }: Props) {
                     <h4 className="text-[#e31e24] text-lg font-bold mb-1  tracking-[0.5px] narutoText2 ">
                       {project.title}
                     </h4>
-                    <p className="text-[#e31e24] text-xs font-medium uppercase tracking-[1px] ninjaText">
+                    {/* <p className="text-[#e31e24] text-xs font-medium uppercase tracking-[1px] ninjaText">
                       Featured Project
-                    </p>
+                    </p> */}
                   </div>
 
                   {/* Brief Description */}
@@ -456,7 +456,7 @@ export default function Projects({ projects }: Props) {
                       target="_blank"
                       className="flex items-center gap-1 text-[#e31e24] hover:text-[#fa5000] text-sm font-medium transition-colors duration-200"
                     >
-                      View Project
+                      View
                       <ArrowTopRightOnSquareIcon className="w-3 h-3" />
                     </Link>
 
