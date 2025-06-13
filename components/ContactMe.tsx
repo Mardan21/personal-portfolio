@@ -69,12 +69,12 @@ export default function ContactMe() {
   };
 
   return (
-    <div className="kunaiCursor flex relative flex-col text-center max-w-7xl px-10 justify-evenly mx-auto items-center sm:min-h-screen md:mt-[-100px] lg:mt-[10%] py-20">
+    <div className="kunaiCursor flex relative flex-col text-center max-w-7xl px-10 justify-evenly mx-auto items-center sm:min-h-screen md:mt-[-100px] py-20">
       <motion.h3
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="narutoTextName xl:absolute top-24 tracking-[5px] md:tracking-[20px] text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl sm:relative text-center"
+        className="narutoTextName tracking-[5px] md:tracking-[20px] text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl sm:relative text-center"
       >
         Contact
       </motion.h3>
