@@ -13,7 +13,8 @@ export default function About({ pageInfo }: Props) {
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="kunaiCursor flex relative flex-col text-center md:text-left max-w-7xl px-10 justify-evenly mx-auto items-center min-h-screen py-20 "
+      className="kunaiCursor flex relative flex-col text-center md:text-left max-w-7xl px-10 justify-evenly mx-auto items-center sm:min-h-screen md:min-h-[100vh] py-20"
+      // className="kunaiCursor flex relative flex-col text-center md:text-left max-w-7xl px-10 justify-evenly mx-auto items-center min-h-screen py-20 "
     >
       <motion.h3
         initial={{ opacity: 0, y: -50 }}
@@ -84,7 +85,7 @@ export default function About({ pageInfo }: Props) {
             </span>{" "}
             ABOUT ME
           </h4>
-          <p className="text-sm md:text-m lg:text-lg text-white/80">
+          <p className="sm:text-xs md:text-lg lg:text-xl text-white/80">
             {pageInfo?.backgroundInformation}
           </p>
         </div>
