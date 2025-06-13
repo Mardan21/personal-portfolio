@@ -365,7 +365,7 @@ export default function Projects({ projects }: Props) {
   };
 
   return (
-    <div className="kunaiCursor flex relative flex-col text-left max-w-7xl px-6 md:px-10 py-24 mx-auto sm:h-[70vh] md:h-[70vh] lg:h-[80vh] 2xl:h-screen">
+    <div className="kunaiCursor flex relative flex-col text-left max-w-7xl px-6 md:px-10 py-24 mx-auto sm:h-full">
       <motion.h3
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -424,7 +424,7 @@ export default function Projects({ projects }: Props) {
                   </div>
 
                   {/* Brief Description */}
-                  <p className="sm:hidden ninjaText text-white/80 text-xs leading-relaxed ml-mb-4 line-clamp-2">
+                  <p className="hidden ninjaText text-white/80 text-xs leading-relaxed ml-mb-4 line-clamp-2">
                     {project.summary.length > 80
                       ? `${project.summary.substring(0, 80)}...`
                       : project.summary}
@@ -432,7 +432,7 @@ export default function Projects({ projects }: Props) {
 
                   {/* Tech Stack (limited) */}
                   {project.technologies && project.technologies.length > 0 && (
-                    <div className="sm:hidden flex flex-wrap gap-1 mb-4">
+                    <div className="hidden flex flex-wrap gap-1 mb-4">
                       {project.technologies.slice(0, 3).map((tech, i) => (
                         <span
                           key={i}
