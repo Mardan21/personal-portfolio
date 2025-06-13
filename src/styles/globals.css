@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @font-face {
   font-family: 'Naruto';
   src: url('../../fonts/njnaruto.ttf') format('truetype');
@@ -24,34 +30,28 @@
 
   .narutoTextName {
     font-family: 'Naruto', sans-serif;
-    color: rgb(255, 68, 0); /* Text color */
+    color: #e31e24; 
     /* -webkit-text-stroke: #0c2fdf; */
-    text-shadow: 
-      -1px 0px 0 #fff,
-      1px 0px 0 #fff,
-      0px -2px 0 #fff,
-      
-      -2px 0px 0 #fff,
-      2px 0px 0 #fff,
-      0px 3px 0 #fff,
+    text-shadow:      
+      -2.5px 0px 0 #fff,
+      2.5px 0px 0 #fff,
+      0px 2.5px 0 #fff,
+      0px -2.5px 0 #fff,
      
       -4px -4px #000,
-      -4px 4px #000,
-      4px -4px 0 #000,
-      4px 4px 0 #000,
-      -6px 0 0 #000,
+      -4px 0px #000,
+      2px -2px 0 #000,
+      /* 4px 4px 0 #000, */
+
+      /* -6px 0 0 #000,
       6px 0 0 #000,
       0 -6px 0 #000,
-      0 6px 0 #000,
-      /* px -5px 0 #000, */
+      0 6px 0 #000, */
       
-      6px 10px 0 #0c2fdf,
-      10px 6px 0 #0c2fdf;
+      4px 6px 0 #000,
+      6px 4px 0 #000,
 
-      /* -2px -2px 0 #0c2fdf,  
-      2px -2px 0 #0c2fdf,
-      -2px 2px 0 #0c2fdf,
-      5px 5px 0 #0c2fdf; */
+      8px 8px 0 #000;
   }
 
   .narutoText {
@@ -71,12 +71,17 @@
 
   .narutoText2 {
     font-family: 'Naruto', sans-serif;
-    color: #0c2fdf; /* Text color */
+    color: black;
+
     text-shadow: 
-      -1px -1px 0 #fff,  
-      1px -1px 0 #fff,
-      -1px 1px 0 #fff,
-      1px 1px 0 #fff; /* Border-like shadow */
+      -0.5px -0.5px 0 #fff,  
+      0.5px -0.5px 0 #fff,
+      -0.5px 0.5px 0 #fff,
+      0.5px 0.5px 0 #fff,
+
+      3px 3px #000;
+      /* -4px 0px #000, */
+      /* 2px -2px 0 #000 */
   }
 
   .ninjaText {
